@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Gallery from './Gallery';
-import Home from './Home';
+import Gallery from './Gallery'; // Import the Gallery component
+import Home from './Home'; // Import the Home component
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-return (
-  <Router>
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/gallery" component={Gallery} />
-    </Switch>
-  </Router>
-);
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
